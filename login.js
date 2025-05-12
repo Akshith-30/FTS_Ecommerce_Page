@@ -1,20 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
     const loginButton = document.querySelector('.login-btn');
-    const usernameInput = document.querySelector('input[placeholder="Username"]');
-    const passwordInput = document.querySelector('input[placeholder="Password"]');
+    const emailInput = document.querySelector('#email');
+    const passwordInput = document.querySelector('#password');
+    const emailError = document.querySelector('#email-error');
+    const passwordError = document.querySelector('#password-error');
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     loginButton.addEventListener('click', (e) => {
         e.preventDefault();
 
-        const username = usernameInput.value.trim();
-        const password = passwordInput.value.trim();
+        emailError.textContent = '';
+        passwordError.textContent = '';
 
-        if (username === '' || password === '') {
-            console.log("Login failed: Please fill in all fields.");
-            alert("Please enter both username and password.");
-        } else {
+        const email = emailInput.value.trim();
+        const password = passwordInput.value.trim();
+        let isValid = true;
+
+        if (email === '') {
+            emailError.textContent = 'Please enter your email.';
+            isValid = false;
+        } else if (!emailRegex.test(email)) {
+            emailError.textContent = 'Please enter a valid email address.';
+            isValid = false;
+        }
+
+        if (password === '') {
+            passwordError.textContent = 'Please enter your password.';
+            isValid = false;
+        }
+
+        if (isValid) {
             console.log("Login successful with:");
-            console.log("Username:", username);
+            console.log("Email:", email);
             console.log("Password:", password);
             alert("Login submitted successfully.");
         }
