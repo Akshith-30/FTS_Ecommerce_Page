@@ -18,9 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
     passwordError.textContent = "";
 
     let hasError = false;
-
-    // Email regex pattern
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
     if (nameInput.value.trim() === "") {
       nameError.textContent = "Full Name is required.";
@@ -38,11 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (passwordInput.value.trim() === "") {
       passwordError.textContent = "Password is required.";
       hasError = true;
+    } else if (!passwordRegex.test(passwordInput.value.trim())) {
+      passwordError.textContent = "Password must be at least 8 characters long, contain an uppercase letter, a number, and a special character.";
+      hasError = true;
     }
 
     if (hasError) return;
-
-    // Collect other fields
     const address = form.querySelector("input[placeholder='Address']").value.trim();
     const dob = form.querySelector("input[type='date']").value;
     const gender = form.querySelector("input[name='gender']:checked");
