@@ -1,4 +1,4 @@
-# 🛒 E-Commerce UI – Simple Login and Registration Flow
+#  E-Commerce UI – Simple Login and Registration Flow
 
 ## 📌 Project Overview
 
@@ -12,7 +12,7 @@ These pages are built using **HTML, CSS, and JavaScript** and include **client-s
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 ```
 /e-commerce-ui
 ├── index.html # Home Page
@@ -23,7 +23,7 @@ These pages are built using **HTML, CSS, and JavaScript** and include **client-s
 ```
 ---
 
-## 🏠 Home Page (`index.html`)
+##  Home Page (`index.html`)
 
 **Purpose:** Welcomes users to the website.
 
@@ -35,7 +35,7 @@ These pages are built using **HTML, CSS, and JavaScript** and include **client-s
 
 ---
 
-## 🔐 Login Page (`login.html`)
+##  Login Page (`login.html`)
 
 **Purpose:** Allows existing users to log in.
 
@@ -50,7 +50,7 @@ These pages are built using **HTML, CSS, and JavaScript** and include **client-s
 
 ---
 
-## 📝 Registration Page (`register.html`)
+##  Registration Page (`register.html`)
 
 **Purpose:** Allows new users to register.
 
@@ -77,7 +77,7 @@ These pages are built using **HTML, CSS, and JavaScript** and include **client-s
 
 ---
 
-## 🛠 Technologies Used
+##  Technologies Used
 
 - **HTML5** – Structure and content
 - **CSS3** – Styling and responsive design
@@ -85,13 +85,13 @@ These pages are built using **HTML, CSS, and JavaScript** and include **client-s
 
 ---
 
-## ✅ Validation Features
+##  Validation Features
 
 ### 🔑 Login Page
 - Checks for empty fields
 - Validates email format
 
-### 🧾 Registration Page
+###  Registration Page
 - All fields are required
 - Valid email address
 - Password complexity rules:
